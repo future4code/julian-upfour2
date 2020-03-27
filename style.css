@@ -1,31 +1,78 @@
 *{
-  padding: 0px;
-  margin: 0px;
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Roboto', sans-serif;
 }
-
-
+  
+  /* MENU - MAX */
 .menu{
-  display:grid;
-  width: 100vw;
-  height: 150px;
-  background-color: #1F1F24;
-  grid-template-columns: 4fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr;
-
-
-
+    display:grid;
+    width: 100vw;
+    height: 150px;
+    background-color: #1F1F24;
+    grid-template-columns: 4fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
 }
-
+  
 #logo{
-  display: block;
-  margin-left: 150px;
-
-
+    display: block;
+    margin-left: 150px;
 }
-
+  
 .items{
-  display: block;
-  margin-top: auto;
-  margin-bottom: auto;
-
+    display: block;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+  
+  /* SECTION - NATHALIA */
+main{
+    width: 100%;
+    background-color:#D2C2B0;
+    color: #1F1F24;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+section{
+    height: 80vh;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+.quemsomos{
+    height: 50vh;
+    width: 70%;
+    display: grid;
+    justify-self: center;
+    align-self: center;
+}
+section>h1{
+    font-size: 1.5rem;
+}
+.servicos{
+    height: 70vh;
+    display: grid;
+    grid-template-rows: 1fr 2fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+}
+.servicos>h1{
+    grid-column: span 2;
+    justify-self: center;
+    align-self: center;
+}
+article{
+    font-size: 1rem;
+    background-color: #1F1F24;
+    color: #D2C2B0;
+    border-radius: 25px;
+    border: 1px solid black;
+    width: 70%;
+    height: 80%;
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+    grid-row: span 2;
+    align-items: center;
+    justify-items: center;
+}
+article>p{
 }
