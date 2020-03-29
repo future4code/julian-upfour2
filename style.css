@@ -6,32 +6,35 @@
   
   /* MENU - MAX */
 .menu{
+    position: fixed;
     display:grid;
     width: 100vw;
-    height: 150px;
+    height: 100px;
     background-color: #1F1F24;
     grid-template-columns: 4fr 1fr 1fr 1fr;
     grid-template-rows: 1fr;
 }
-  
 #logo{
     display: block;
     margin-left: 150px;
+    height: 100px;
 }
-  
 .items{
     display: block;
     margin-top: auto;
     margin-bottom: auto;
+    font-size: 15px;
 }
   
   /* SECTION - NATHALIA */
 main{
+    padding-top: 100px;
     width: 100%;
-    background-color:#D2C2B0;
+    background-color:#faf5e4;
     color: #1F1F24;
     display: grid;
     grid-template-rows: 1fr 1fr;
+    font-size: 1.5rem;
 }
 section{
     height: 80vh;
@@ -40,46 +43,43 @@ section{
 }
 .quemsomos{
     height: 50vh;
+    padding: 5%;
     display: grid;
     align-self: center;
     justify-items: center;
 }
-section>h1{
-    font-size: 1.5rem;
-}
-.quemsomos>p{
-    width: 70%;
-    display: grid;
-    justify-items: center;
-    align-items: center;
-}
 .servicos{
-    height: 80vh;
+    height: 70vh;
     display: grid;
     grid-template-rows: 1fr 2fr 1fr;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 2fr 1fr 2fr 1fr;
     justify-items: center;
-    align-items: center;
 }
 .servicos>h1{
-    font-size: 1.5rem;
-    grid-column: span 2;
+    grid-column: span 5;
     justify-self: center;
     align-self: center;
 }
+
 article{
     font-size: 1rem;
     background-color: #1F1F24;
     color: #D2C2B0;
     border-radius: 25px;
     border: 1px solid black;
-    width: 50%;
-    height: 90%;
+    width: 100%;
+    height: 80%;
     display: grid;
     grid-template-rows: 1fr 2fr;
     grid-row: span 2;
-    justify-items: center;
     align-items: center;
+    justify-items: center;
+}
+article:first-of-type{
+    grid-column: 2;
+}
+article:last-child{
+    grid-column: 4;
 }
 
 /*FOOTER LEANDRO*/
@@ -88,19 +88,57 @@ footer{
     width: 100vw;
     height: 100px;
     background-color: #1F1F24;
-    grid-template-columns: 1fr;
+    grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
     grid-template-rows: auto;
-  }
-  
-  .direitos{
+} 
+.direitos{
     display:grid;
     color:#D2C2B0;
     font-size: 1.5rem;
     justify-items: center;
     align-items: center;
-  }
-  
-    //justify-items: center;
-    //align-items: center;
-    //grid-column: 1 / 2; 
-    //padding: 1rem;
+}
+@media screen and (min-device-width: 375px) and (max-device-width: 667px){
+    .menu{display:grid; 
+        grid-template-columns: 1fr 1fr 1fr 1fr; 
+        grid-template-rows: 1fr 1fr;
+        width: 100vw;
+        height: 20vh;
+    }
+    img{
+        margin: 0;
+        grid-column: span 4;
+    }
+    .items{
+        display: block;
+        font-size: 15px;
+        justify-self: center;
+    }
+    section{
+        font-size: 1rem;
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .servicos{
+        height: 70vh;
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+    article{
+        font-size: 10px;
+    }
+    article:first-of-type{
+        grid-row-start: 2;
+        grid-column-start: 2;
+        grid-column-end: 5;
+    }
+    article:last-child{
+        grid-row-start: 3;
+        grid-column-start: 2;
+        grid-column-end: 5;
+    }
+    footer{
+        grid-template-columns: 2fr  1fr 1fr;
+}
